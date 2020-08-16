@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../Resources/img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../Resources/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../Resources/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../Resources/css/style.css">
+
+    <style>
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1000px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 650px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+
+        /* Navbar animation */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        /* Adding color to the Navbar on mobile */
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #1C2331;
+            }
+        }
+
+        /* Footer color for sake of consistency with Navbar */
+        .page-footer {
+            background-color: #1C2331;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/">
+                <strong>MDB</strong>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/">About MDB</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/getting-started/download/">Free
+                            download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/">Free
+                            tutorials</a>
+                    </li>
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/MDBootstrap" class="nav-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="login-minimize">
+                        <a  class="nav-link border border-light rounded">
+                            <i class="fa fa-window-minimize mr-2 py-0"></i>Minimize
+                        </a>
+                    </li>
+                    <li class="nav-item" id="login-close">
+                        <a  class="nav-link border border-light rounded">
+                            <i class="fa fa-window-close mr-2 py-0"></i>Close
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Full Page Intro -->
+    <div class="view full-page-intro"
+        style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="container">
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 white-text text-center text-md-left">
+
+                        <h1 class="display-4 font-weight-bold">Learn Bootstrap 4 with MDB</h1>
+
+                        <hr class="hr-light">
+
+                        <p>
+                            <strong>Best & free guide of responsive web design</strong>
+                        </p>
+
+                        <p class="mb-4 d-none d-md-block">
+                            <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users.
+                                Video and
+                                written versions
+                                available. Create your own, stunning website.</strong>
+                        </p>
+
+                        <a href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-indigo btn-lg">Start
+                            free tutorial
+                            <i class="fas fa-graduation-cap ml-2"></i>
+                        </a>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6 col-xl-5 mb-4">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form name="">
+                                    <!-- Heading -->
+                                    <h3 class="dark-grey-text text-center">
+                                        <strong>Login into Application</strong>
+                                    </h3>
+                                    <hr>
+
+                                    <div class="md-form">
+                                        <i class="fas fa-user prefix grey-text"></i>
+                                        <input type="text" id="login-username" class="form-control">
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-key prefix grey-text"></i>
+                                        <input type="password" id="login-password" class="form-control">
+                                    </div>
+
+
+
+                                    <div class="text-center">
+                                        <fieldset class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="elevatedPriviledge">
+                                            <label for="checkbox" class="form-check-label dark-grey-text">Login with
+                                                Elevated
+                                                Priviledges</label>
+                                        </fieldset>
+                                        <hr>
+                                        <button class="btn btn-indigo" onclick="appLogin()">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Form -->
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Content -->
+
+        </div>
+        <!-- Mask & flexbox options-->
+
+    </div>
+    <!-- Full Page Intro -->
+
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn" style="padding-left: 0px;">
+
+        <!--Call to action-->
+        <div class="pt-1">
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/"
+                role="button">Download MDB
+                <i class="fas fa-download ml-2"></i>
+            </a>
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" role="button">Start
+                free tutorial
+                <i class="fas fa-graduation-cap ml-2"></i>
+            </a>
+        </div>
+        <!--/.Call to action-->
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="https://www.facebook.com/mdbootstrap">
+                <i class="fab fa-facebook-f mr-3"></i>
+            </a>
+
+            <a href="https://twitter.com/MDBootstrap">
+                <i class="fab fa-twitter mr-3"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4">
+                <i class="fab fa-youtube mr-3"></i>
+            </a>
+
+            <a href="https://plus.google.com/u/0/b/107863090883699620484">
+                <i class="fab fa-google-plus-g mr-3"></i>
+            </a>
+
+            <a href="https://dribbble.com/mdbootstrap">
+                <i class="fab fa-dribbble mr-3"></i>
+            </a>
+
+            <a href="https://pinterest.com/mdbootstrap">
+                <i class="fab fa-pinterest mr-3"></i>
+            </a>
+
+            <a href="https://github.com/mdbootstrap/bootstrap-material-design">
+                <i class="fab fa-github mr-3"></i>
+            </a>
+
+            <a href="http://codepen.io/mdbootstrap/">
+                <i class="fab fa-codepen mr-3"></i>
+            </a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+    <script type="text/javascript" src="../AppJs/login.js"></script>
+    <!-- <script>new WOW().init()</script> -->
+</body>
+
+</html>

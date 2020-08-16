@@ -2,9 +2,10 @@
   "name": "demo_login",
   "version": "1.0.0",
   "description": "Basic Login Application with Electron + Python",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "electron ."
   },
   "author": "Ayush Adarsh",
   "license": "ISC",
