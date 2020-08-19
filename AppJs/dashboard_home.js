@@ -1,17 +1,16 @@
-const { remote } = require('electron')
+const { remote, ipcRenderer } = require('electron')
 
-document.getElementById('login-minimize').addEventListener('click', () => {
+document.getElementById('dash-minimize').addEventListener('click', () => {
     remote.getCurrentWindow().minimize()
 })
 
-document.getElementById('login-close').addEventListener('click', () => {
-    remote.getCurrentWindow().close()
+document.getElementById('dash-close').addEventListener('click', () => {
+    //remote.getCurrentWindow().close()
+    ipcRenderer.send('closeApp')
 })
 
 document.getElementById('dash-signOut').addEventListener('click', () => {
-    remote.getCurrentWindow().minimize()
+    ipcRenderer.send('logoutFromApp')
+    //remote.getCurrentWindow().close()
 })
 
-document.getElementById().addEventListener('click', () => {
-
-})

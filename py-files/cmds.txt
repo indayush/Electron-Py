@@ -1,0 +1,12 @@
+# Create a new Env (Install lint if required)
+python -m venv .venv
+
+# Install mongoDb for current Env
+python -m pip install pymongo
+python -m pip install pymongo[snappy,gssapi,srv,tls,zstd]
+python -m pip install pymongo[srv]
+
+
+pip install flask
+Set-Executionpolicy -ExecutionPolicy RemoteSigned -Scope Process
+.venv\Scripts\activate

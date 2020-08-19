@@ -1,0 +1,8 @@
+
+TO connect to MongoDB - 
+pip install pymongo
+pip install pymongo[snappy,gssapi,srv,tls,zstd]
+
+npm install --save request
+npm install --save request-promise
+

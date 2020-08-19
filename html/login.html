@@ -129,12 +129,12 @@
                         </a>
                     </li>
                     <li class="nav-item" id="login-minimize">
-                        <a  class="nav-link border border-light rounded">
+                        <a class="nav-link border border-light rounded">
                             <i class="fa fa-window-minimize mr-2 py-0"></i>Minimize
                         </a>
                     </li>
                     <li class="nav-item" id="login-close">
-                        <a  class="nav-link border border-light rounded">
+                        <a class="nav-link border border-light rounded">
                             <i class="fa fa-window-close mr-2 py-0"></i>Close
                         </a>
                     </li>
@@ -204,11 +204,11 @@
 
                                     <div class="md-form">
                                         <i class="fas fa-user prefix grey-text"></i>
-                                        <input type="text" id="login-username" class="form-control">
+                                        <input type="text" id="login_username" class="form-control">
                                     </div>
                                     <div class="md-form">
                                         <i class="fas fa-key prefix grey-text"></i>
-                                        <input type="password" id="login-password" class="form-control">
+                                        <input type="password" id="login_password" class="form-control"  onclick="get_userName()">
                                     </div>
 
 
@@ -221,7 +221,7 @@
                                                 Priviledges</label>
                                         </fieldset>
                                         <hr>
-                                        <button class="btn btn-indigo" onclick="appLogin()">Login</button>
+                                        <button id="loginBtn" class="btn btn-indigo">Login</button>
                                     </div>
 
                                 </form>
