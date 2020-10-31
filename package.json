@@ -10,10 +10,9 @@
   "author": "Ayush Adarsh",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^9.2.0"
+    "electron": "^9.3.3"
   },
   "dependencies": {
-    "electron-prebuilt": "^1.4.13",
     "python-shell": "^2.0.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"

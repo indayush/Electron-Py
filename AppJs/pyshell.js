@@ -3,7 +3,7 @@ let { PythonShell } = require('python-shell')
 
 let options = {
     mode: 'text',
-    pythonPath: 'C:/Users/Ayush Adarsh/scoop/apps/python/current/python.exe',
+    pythonPath: 'C:/Users/Ayush/scoop/apps/python/current/python.exe',
     pythonOptions: ['-u'], // get print results in real-time
     scriptPath: './',
     args: ['userName']
