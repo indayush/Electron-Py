@@ -13,6 +13,8 @@
     "electron": "^9.3.3"
   },
   "dependencies": {
+    "config": "^3.3.3",
+    "properties": "^1.2.1",
     "python-shell": "^2.0.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"

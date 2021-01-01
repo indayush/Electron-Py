@@ -1,3 +1,6 @@
+require('dotenv/config')
+const config = require('config');
+
 const electron = require('electron')
 const app = electron.app
 const path = require('path')
@@ -5,14 +8,16 @@ const { ipcMain } = require('electron')
 
 const BrowserWindow = electron.BrowserWindow
 
-var enableDevModeInAllWindow = true
-var loggingEnabled = true
+const windowWidth = config.get('ELECTRON_WINDOW_WIDTH');
+const windowHeight = config.get('ELECTRON_WINDOW_HEIGHT');
+const NODE_Enable_DEV_Mode_In_All_Window = config.get('NODE_Enable_DEV_Mode_In_All_Window');
+const Node_Logging_Enabled = config.get('NODE_Logging_Enabled');
 
 
 app.on('ready', function () {
     let loginWindow = new BrowserWindow({
-        width: 1360,
-        height: 768,
+        width: windowWidth,
+        height: windowHeight,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true
@@ -23,10 +28,9 @@ app.on('ready', function () {
         //frame:false
     })
 
-
     //loginWindow.maximize()
 
-    if (enableDevModeInAllWindow) {
+    if (NODE_Enable_DEV_Mode_In_All_Window) {
         loginWindow.webContents.openDevTools()
     }
     loginWindow.loadURL('file://' + __dirname + '/html/login.html')
@@ -38,8 +42,8 @@ app.on('ready', function () {
     // Starting Second Window here -
 
     let dashboard_Home = new BrowserWindow({
-        width: 1360,
-        height: 768,
+        width: windowWidth,
+        height: windowHeight,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true
@@ -51,17 +55,24 @@ app.on('ready', function () {
     })
 
     //dashboard_Home.maximize()
-    if (enableDevModeInAllWindow) {
+    if (NODE_Enable_DEV_Mode_In_All_Window) {
         dashboard_Home.webContents.openDevTools()
     }
+
     dashboard_Home.loadURL('file://' + __dirname + '/html/dashboard_Homepage.html')
     //console.log('file://' + __dirname + '/html/dashboard_Homepage.html')
     dashboard_Home.once('ready-to-show', function () {
         dashboard_Home.hide()
     })
 
+
+
+
+
+    // IPC Communications
+
     ipcMain.on('login-into-app', function () {
-        if (loggingEnabled) {
+        if (Node_Logging_Enabled) {
             console.log('Command Recieved in Node JS - ' + 'login-into-app')
         }
         loginWindow.hide()
@@ -69,14 +80,14 @@ app.on('ready', function () {
     })
 
     ipcMain.on('closeApp', function () {
-        if (loggingEnabled) {
+        if (Node_Logging_Enabled) {
             console.log('Command Recieved in Node JS - ' + 'closeApp')
         }
         app.quit()
     })
 
     ipcMain.on('logoutFromApp', function () {
-        if (loggingEnabled) {
+        if (Node_Logging_Enabled) {
             console.log('Command Recieved in Node JS - ' + 'logoutFromApp')
         }
         loginWindow.show()
@@ -85,7 +96,7 @@ app.on('ready', function () {
     
 
     loginWindow.on('move', function () {
-        if (loggingEnabled) {
+        if (Node_Logging_Enabled) {
             console.log('moveWindow function invoked')
         }
         let position = loginWindow.getPosition()
