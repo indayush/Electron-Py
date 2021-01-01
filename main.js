@@ -1,4 +1,3 @@
-require('dotenv/config')
 const config = require('config');
 
 const electron = require('electron')
@@ -12,6 +11,7 @@ const windowWidth = config.get('ELECTRON_WINDOW_WIDTH');
 const windowHeight = config.get('ELECTRON_WINDOW_HEIGHT');
 const NODE_Enable_DEV_Mode_In_All_Window = config.get('NODE_Enable_DEV_Mode_In_All_Window');
 const Node_Logging_Enabled = config.get('NODE_Logging_Enabled');
+const ELECTRON_ENABLE_WINDOW_FRAME = config.get('ELECTRON_ENABLE_WINDOW_FRAME');
 
 
 app.on('ready', function () {
@@ -24,8 +24,8 @@ app.on('ready', function () {
         },
         titleBarStyle: "hidden",
         show: false,
-
-        //frame:false
+        frame:ELECTRON_ENABLE_WINDOW_FRAME
+        // Frame is used top toggle outer menu bar for app
     })
 
     //loginWindow.maximize()
@@ -49,9 +49,8 @@ app.on('ready', function () {
             nodeIntegration: true
         },
         titleBarStyle: "hidden",
-        show: false
-
-        //frame:false
+        show: false,
+        frame:ELECTRON_ENABLE_WINDOW_FRAME
     })
 
     //dashboard_Home.maximize()
